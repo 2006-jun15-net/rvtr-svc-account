@@ -82,9 +82,9 @@ namespace RVTR.Account.WebApi
     /// <param name="descriptionProvider"></param>
     /// <param name="applicationBuilder"></param>
     /// <param name="hostEnvironment"></param>
-    public void Configure(IApiVersionDescriptionProvider descriptionProvider, IApplicationBuilder applicationBuilder, IWebHostEnvironment hostEnvironment)
+    public void Configure(IApiVersionDescriptionProvider descriptionProvider, IApplicationBuilder applicationBuilder, IWebHostEnvironment hostEnvironment, ILoggerFactory loggerFactory)
     {
-      
+      loggerFactory.AddFile("Logs/ts-{Date}.txt");
 
       if (hostEnvironment.IsDevelopment())
       {
