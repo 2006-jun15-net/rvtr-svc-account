@@ -1,0 +1,55 @@
+﻿<Properties StartupConfiguration="{7E2DF5E7-D0CB-4A6A-9113-784B6A656FB4}|Default">
+  <MonoDevelop.Ide.ItemProperties.RVTR.Account.WebApi PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RVTR.Account.WebApi/ResponseObjects/ValidationError.cs">
+    <Files>
+      <File FileName="RVTR.Account.DataContext/AccountContext.cs" Line="5" Column="14" />
+      <File FileName="RVTR.Account.WebApi/Controllers/ProfileController.cs" Line="1" Column="1" />
+      <File FileName="RVTR.Account.DataContext/Repositories/Repository.cs" Line="28" Column="68" />
+      <File FileName="RVTR.Account.DataContext/Repositories/UnitOfWork.cs" Line="22" Column="55" />
+      <File FileName="RVTR.Account.DataContext/Repositories/AccountRepository.cs" Line="24" Column="5" />
+      <File FileName="RVTR.Account.ObjectModel/packages.lock.json" />
+      <File FileName="RVTR.Account.UnitTesting/Tests/AccountControllerTest.cs" Line="83" Column="2" />
+      <File FileName="RVTR.Account.WebApi/Program.cs" Line="52" Column="47" />
+      <File FileName="RVTR.Account.WebApi/Startup.cs" Line="64" Column="53" />
+      <File FileName="RVTR.Account.WebApi/Controllers/AccountController.cs" Line="118" Column="4" />
+      <File FileName="RVTR.Account.ObjectModel/Models/AccountModel.cs" Line="30" Column="1" />
+      <File FileName="RVTR.Account.ObjectModel/Models/ProfileModel.cs" Line="40" Column="56" />
+      <File FileName="RVTR.Account.ObjectModel/Models/AddressModel.cs" Line="26" Column="9" />
+      <File FileName="RVTR.Account.ObjectModel/Models/BankCardModel.cs" Line="25" Column="65" />
+      <File FileName="RVTR.Account.ObjectModel/Models/NameModel.cs" Line="33" Column="21" />
+      <File FileName="RVTR.Account.ObjectModel/Models/PaymentModel.cs" Line="25" Column="44" />
+      <File FileName="RVTR.Account.UnitTesting/Tests/RepositoryTest.cs" Line="1" Column="1" />
+      <File FileName="RVTR.Account.WebApi/ResponseObjects/ErrorObject.cs" Line="1" Column="1" />
+      <File FileName="RVTR.Account.WebApi/ResponseObjects/MessageObject.cs" Line="1" Column="1" />
+      <File FileName="RVTR.Account.WebApi/ResponseObjects/ValidationError.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RVTR.Account" expanded="True">
+            <Node name="RVTR.Account.DataContext" expanded="True">
+              <Node name="Repositories" expanded="True" />
+            </Node>
+            <Node name="RVTR.Account.ObjectModel" expanded="True">
+              <Node name="Models" expanded="True" />
+            </Node>
+            <Node name="RVTR.Account.UnitTesting" expanded="True" />
+            <Node name="RVTR.Account.WebApi" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="ResponseObjects" expanded="True">
+                <Node name="ValidationError.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.RVTR.Account.UnitTesting PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

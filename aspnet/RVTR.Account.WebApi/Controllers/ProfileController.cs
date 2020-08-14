@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RVTR.Account.DataContext.Repositories;
 using RVTR.Account.ObjectModel.Models;
+using RVTR.Account.WebApi.ResponseObjects;
 
 namespace RVTR.Account.WebApi.Controllers
 {
@@ -47,7 +48,7 @@ namespace RVTR.Account.WebApi.Controllers
       }
       catch
       {
-        return NotFound(id);
+        return NotFound(new ErrorObject($"Profile with ID number {id} does not exist"));
       }
     }
 

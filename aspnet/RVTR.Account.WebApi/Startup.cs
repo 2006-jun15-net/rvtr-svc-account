@@ -5,7 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 using RVTR.Account.DataContext;
 using RVTR.Account.DataContext.Repositories;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -60,10 +62,13 @@ namespace RVTR.Account.WebApi
         });
       });
 
-      services.AddScoped<ClientZipkinMiddleware>();
+      services.AddScoped<ClientZipkinMiddleware>(); 
       services.AddScoped<UnitOfWork>();
       services.AddSwaggerGen();
       services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ClientSwaggerOptions>();
+      services.AddControllers().AddNewtonsoftJson(options => 
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+      );
       services.AddVersionedApiExplorer(options =>
       {
         options.GroupNameFormat = "VV";
@@ -79,6 +84,8 @@ namespace RVTR.Account.WebApi
     /// <param name="hostEnvironment"></param>
     public void Configure(IApiVersionDescriptionProvider descriptionProvider, IApplicationBuilder applicationBuilder, IWebHostEnvironment hostEnvironment)
     {
+      
+
       if (hostEnvironment.IsDevelopment())
       {
         applicationBuilder.UseDeveloperExceptionPage();
