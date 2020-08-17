@@ -8,7 +8,7 @@ namespace RVTR.Account.ObjectModel.Models
     /// <summary>
     /// Represents the _Name_ model
     /// </summary>
-    public class NameModel : IValidatableObject
+    public class NameModel : BaseBusinessModel, IValidatableObject
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

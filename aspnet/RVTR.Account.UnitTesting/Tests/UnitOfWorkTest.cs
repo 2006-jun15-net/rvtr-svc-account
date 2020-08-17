@@ -16,7 +16,7 @@ namespace RVTR.Account.UnitTesting.Tests
     {
       await _connection.OpenAsync();
 
-      try
+      try 
       {
         using (var ctx = new AccountContext(_options))
         {

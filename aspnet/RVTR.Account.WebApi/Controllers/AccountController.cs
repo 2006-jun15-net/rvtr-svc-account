@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RVTR.Account.DataContext.Repositories;
 using RVTR.Account.ObjectModel.Models;
-using System.Threading.Tasks;
 using RVTR.Account.WebApi.ResponseObjects;
 using System;
 using Microsoft.AspNetCore.Http;
@@ -12,7 +11,7 @@ using Microsoft.AspNetCore.Http;
 namespace RVTR.Account.WebApi.Controllers
 {
   /// <summary>
-  ///
+  /// Represents the _Account Controller_ class
   /// </summary>
   [ApiController]
   [ApiVersion("0.0")]
@@ -24,7 +23,7 @@ namespace RVTR.Account.WebApi.Controllers
     private readonly UnitOfWork _unitOfWork;
 
     /// <summary>
-    ///
+    /// The _Account Controller_ constructor
     /// </summary>
     /// <param name="logger"></param>
     /// <param name="unitOfWork"></param>
@@ -50,7 +49,7 @@ namespace RVTR.Account.WebApi.Controllers
         {
           _logger.LogDebug("Deleting an account by its ID number...");
         }
-        await _unitOfWork.Account.DeleteAsync(id);
+        //await _unitOfWork.Account.DeleteAsync(id);
         await _unitOfWork.CommitAsync();
 
         if (_logger != null)
@@ -208,7 +207,7 @@ namespace RVTR.Account.WebApi.Controllers
         }
         return Ok(MessageObject.Success);
       }
-      
+
       catch
       {
         if (_logger != null)
@@ -220,6 +219,6 @@ namespace RVTR.Account.WebApi.Controllers
 
     }
 
-    
+
   }
 }

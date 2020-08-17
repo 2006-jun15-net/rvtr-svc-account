@@ -8,7 +8,7 @@ namespace RVTR.Account.ObjectModel.Models
     /// <summary>
     /// Represents the _Profile_ model
     /// </summary>
-    public class ProfileModel : IValidatableObject
+    public class ProfileModel : BaseBusinessModel, IValidatableObject 
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

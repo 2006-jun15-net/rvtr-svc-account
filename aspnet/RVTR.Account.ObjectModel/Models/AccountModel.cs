@@ -8,8 +8,8 @@ namespace RVTR.Account.ObjectModel.Models
     /// <summary>
     /// Represents the _Account_ model
     /// </summary>
-    public class AccountModel : IValidatableObject
-    {
+    public class AccountModel : BaseBusinessModel, IValidatableObject
+  {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

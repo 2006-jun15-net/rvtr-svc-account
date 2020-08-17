@@ -8,7 +8,7 @@ using RVTR.Account.ObjectModel.Models;
 namespace RVTR.Account.WebApi.Controllers
 {
     /// <summary>
-    ///
+    /// Represents the _Address Controller_ class
     /// </summary>
     [ApiController]
     [ApiVersion("0.0")]
@@ -20,7 +20,7 @@ namespace RVTR.Account.WebApi.Controllers
         private readonly UnitOfWork _unitOfWork;
 
         /// <summary>
-        ///
+        /// The _Address Controller_ constructor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="unitOfWork"></param>
@@ -31,7 +31,7 @@ namespace RVTR.Account.WebApi.Controllers
         }
 
         /// <summary>
-        ///
+        /// Deletes a user's address
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -40,7 +40,7 @@ namespace RVTR.Account.WebApi.Controllers
         {
             try
             {
-                await _unitOfWork.Address.DeleteAsync(id);
+                //await _unitOfWork.Address.DeleteAsync(id);
                 await _unitOfWork.CommitAsync();
 
                 return Ok();
@@ -52,7 +52,7 @@ namespace RVTR.Account.WebApi.Controllers
         }
 
         /// <summary>
-        ///
+        /// Get all user addresses
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -62,7 +62,7 @@ namespace RVTR.Account.WebApi.Controllers
         }
 
         /// <summary>
-        ///
+        /// Get a user's address by its ID number
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -80,31 +80,31 @@ namespace RVTR.Account.WebApi.Controllers
         }
 
         /// <summary>
-        ///
+        /// Add an address to a user's account
         /// </summary>
         /// <param name="address"></param>
         /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Post(AddressModel address)
         {
-            await _unitOfWork.Address.InsertAsync(address);
-            await _unitOfWork.CommitAsync();
+          await _unitOfWork.Address.InsertAsync(address);
+          await _unitOfWork.CommitAsync();
 
-            return Accepted(address);
+          return Accepted(address);
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="address"></param>
-        /// <returns></returns>
-        [HttpPut]
-        public async Task<IActionResult> Put(AddressModel address)
-        {
-            _unitOfWork.Address.Update(address);
-            await _unitOfWork.CommitAsync();
+    ///// <summary>
+    ///// Update a user's address
+    ///// </summary> 
+    ///// <param name="address"></param>
+    ///// <returns></returns>
+    [HttpPut]
+    public async Task<IActionResult> Put(AddressModel address)
+    {
+      _unitOfWork.Address.Update(address);
+      await _unitOfWork.CommitAsync();
 
-            return Accepted(address);
-        }
+      return Accepted(address);
     }
+  }
 }

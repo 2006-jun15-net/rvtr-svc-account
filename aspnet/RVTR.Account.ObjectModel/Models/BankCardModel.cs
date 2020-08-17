@@ -8,8 +8,8 @@ namespace RVTR.Account.ObjectModel.Models
     /// <summary>
     /// Represents the _BankCard_ model
     /// </summary>
-    public class BankCardModel : IValidatableObject
-    {
+    public class BankCardModel : BaseBusinessModel, IValidatableObject
+  {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

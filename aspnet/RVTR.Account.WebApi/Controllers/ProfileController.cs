@@ -11,7 +11,7 @@ using RVTR.Account.WebApi.ResponseObjects;
 namespace RVTR.Account.WebApi.Controllers
 {
   /// <summary>
-  ///
+  /// Represents the _Profile Controller_ class
   /// </summary>
   [ApiController]
   [ApiVersion("0.0")]
@@ -23,7 +23,7 @@ namespace RVTR.Account.WebApi.Controllers
     private readonly UnitOfWork _unitOfWork;
 
     /// <summary>
-    ///
+    /// The _Profile Controller_ constructor
     /// </summary>
     /// <param name="logger"></param>
     /// <param name="unitOfWork"></param>
@@ -49,7 +49,7 @@ namespace RVTR.Account.WebApi.Controllers
         {
           _logger.LogDebug("Deleting a profile by its ID number...");
         }
-        await _unitOfWork.Profile.DeleteAsync(id);
+        //await _unitOfWork.Profile.DeleteAsync(id);
         await _unitOfWork.CommitAsync();
 
         if (_logger != null)
@@ -167,7 +167,7 @@ namespace RVTR.Account.WebApi.Controllers
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> Put(ProfileModel profile)
     {
-      if(!ModelState.IsValid)
+      if (!ModelState.IsValid)
       {
         if (_logger != null)
         {
@@ -189,6 +189,6 @@ namespace RVTR.Account.WebApi.Controllers
       return Ok(MessageObject.Success);
       //return Accepted(profile);
     }
-   
+
   }
 }

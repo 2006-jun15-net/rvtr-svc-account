@@ -8,7 +8,7 @@ namespace RVTR.Account.ObjectModel.Models
     /// <summary>
     /// Represents the _Payment_ model
     /// </summary>
-    public class PaymentModel : IValidatableObject
+    public class PaymentModel : BaseBusinessModel, IValidatableObject
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using RVTR.Account.DataContext.DTOModels;
 using RVTR.Account.ObjectModel.Models;
 
 namespace RVTR.Account.DataContext.Repositories
@@ -11,16 +12,16 @@ namespace RVTR.Account.DataContext.Repositories
         private readonly AccountContext _context;
 
         public virtual AccountRepository Account { get; }
-        public virtual Repository<ProfileModel> Profile { get; }
-        public virtual Repository<AddressModel> Address { get; }
+        public virtual Repository<ProfileModel, ProfileDTO> Profile { get; }
+        public virtual Repository<AddressModel, AddressDTO> Address { get; }
 
         public UnitOfWork(AccountContext context)
         {
             _context = context;
 
             Account = new AccountRepository(context);
-            Profile = new Repository<ProfileModel>(context);
-            Address = new Repository<AddressModel>(context);
+            Profile = new Repository<ProfileModel, ProfileDTO>(context);
+            Address = new Repository<AddressModel, AddressDTO>(context);
         }
 
         /// <summary>
