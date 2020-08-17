@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using RVTR.Account.ObjectModel.Models;
 using System.Linq;
 using System.Collections.Generic;
@@ -21,7 +21,6 @@ namespace RVTR.Account.DataContext
             modelBuilder.Entity<AccountModel>().HasKey(e => e.Id);
             modelBuilder.Entity<AddressModel>().HasKey(e => e.Id);
             modelBuilder.Entity<BankCardModel>().HasKey(e => e.Id);
-            modelBuilder.Entity<NameModel>().HasKey(e => e.Id);
             modelBuilder.Entity<PaymentModel>().HasKey(e => e.Id);
             modelBuilder.Entity<ProfileModel>().HasKey(e => e.Id);
 

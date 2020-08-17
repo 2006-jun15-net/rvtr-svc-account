@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -29,7 +29,35 @@ namespace RVTR.Account.ObjectModel.Models
             }
         }
 
-        public NameModel Name { get; set; }
+        //public string Family { get; set; }
+        private string _family;
+        public string Family
+        {
+            get => _family;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("First name cannot be null.", nameof(value));
+                }
+                _family = value;
+            }
+        }
+
+        //public string Given { get; set; }
+        private string _given;
+        public string Given
+        {
+            get => _given;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Last name cannot be null.", nameof(value));
+                }
+                _given = value;
+            }
+        }
 
         //public string Phone { get; set; }
         private string _phone;
