@@ -30,7 +30,19 @@ namespace RVTR.Account.ObjectModel.Models
         _cardnumber = value;
       }
     }
-    public string securityCode;
+    private string _securityCode;
+    public string securityCode
+    {
+      get => _securityCode;
+      set
+      {
+        if (string.IsNullOrEmpty(value))
+        {
+          throw new ArgumentException("Security code cannot be null.", nameof(value));
+        }
+        _cardname = value;
+      }
+    }
 
     private string _cardname;
     public string cardName
